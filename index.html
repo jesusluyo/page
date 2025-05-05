@@ -22,13 +22,15 @@
 </head>
 <body>
   <div class="timestamp" id="timestamp"></div>
+<div class="text" id="text"></div>
 
   <script>
     function updateTimestamp() {
       document.getElementById('timestamp').textContent = new Date().getTime();
+      document.getElementById('text').textContent = new Date();
     }
     updateTimestamp();
-    setInterval(updateTimestamp, 1000); // Update every second
+    setInterval(updateTimestamp, 10_000); // Update every 10 second
   </script>
 </body>
 </html>
